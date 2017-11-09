@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DeviceScanActivity">
+
+        </activity>
     </application>
+
+    <!-- 버전 6.0(마시멜로우)부터는 위치 권한이 있어야 블루투스 스캔을 할 수 있음 -->
+    <!-- 추가로 실시간 권한 작업이 필요함 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 블루투스 권한 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
 
 </manifest>
